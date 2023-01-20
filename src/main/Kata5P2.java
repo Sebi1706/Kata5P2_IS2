@@ -3,15 +3,14 @@ import java.util.ArrayList;
 import java.util.List;
 import model.*;
 import view.*;
+import view.MailListReaderBD;
 
-public class Kata4 {
+public class Kata5P2 {
     private static String fileName = "email.txt";
     private static List<Mail> mailList = new ArrayList<Mail>();
-    private static Histogram<String> histogram = new Histogram<String>();
-    private static HistogramDisplay histogramDisplay;
+    private static Histogram<String> histogram;
     
     public static void main(String[] args) {
-        
         execute();
     }
     
@@ -22,7 +21,7 @@ public class Kata4 {
     }
     
     private static void input(){
-        mailList = MailListReader.read(fileName);   
+        mailList = MailListReaderBD.read(fileName);   
     }    
 
     private static void process() {
